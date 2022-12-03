@@ -16,7 +16,7 @@ class MyWidget(QMainWindow, Ui_widget):
         self.pbInsert.clicked.connect(self.insert_stud)
         self.pbOpen.clicked.connect(self.open_file)
         self.pbDelete.clicked.connect(self.delete_stud)
-       # self.pbFind.clicked.connect(self.find_for_val)
+        self.pbFind.clicked.connect(self.find_for_val)
         self.conn = None
 
     def open_file(self):
@@ -84,20 +84,11 @@ class MyWidget(QMainWindow, Ui_widget):
             print(f"Исключение: {e}")
             return e
         self.update_stud()
-'''
-    def avg_age(self):
-        try:
-            cur = self.conn.cursor()
-            avg = cur.execute("select avg(age) as avg from student").fetchone()
-        except Exception as e:
-            print(f"Проблемы с подключением к БД. {e}")
-            return e
-        self.lblAvgAge.setText(f"Средний возрст {round(avg[0], 2)}")
 
     def find_for_val(self):
-        val = self.leFind.text()
+        val = self.leFIO.text()
         col = self.cbColNames.itemText(self.cbColNames.currentIndex())
-        self.update_twStud(f"select * from student where {col} like '{val}%'")
+        self.update_stud(f"select * from student where {col} like '{val}%'")
         # try:
         #     cur = self.conn.cursor()
         #     avg = cur.execute(f"select * from student where {col} like '{val}%'").fetchone()
@@ -110,10 +101,11 @@ class MyWidget(QMainWindow, Ui_widget):
         if self.conn is not None:
             self.conn.close()
         event.accept()
-'''
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = MyWidget()
     ex.show()
     sys.exit(app.exec_())
+
