@@ -18,13 +18,23 @@
   <property name="windowTitle">
    <string>Студенты</string>
   </property>
-  <widget class="QTableWidget" name="tableWidget">
+  <widget class="QTableWidget" name="twStud">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>270</y>
      <width>511</width>
      <height>192</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="leFind">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>130</y>
+     <width>142</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>
@@ -80,7 +90,7 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QSpinBox" name="spAge"/>
+     <widget class="QSpinBox" name="sbAge"/>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="label_4">
@@ -100,7 +110,7 @@
      </widget>
     </item>
     <item row="4" column="1">
-     <widget class="QLineEdit" name="lineEdit_3"/>
+     <widget class="QLineEdit" name="leEmail"/>
     </item>
     <item row="5" column="0">
      <widget class="QLabel" name="label_6">
@@ -110,7 +120,7 @@
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="QComboBox" name="comboBox"/>
+     <widget class="QComboBox" name="cbGroup"/>
     </item>
     <item row="6" column="0">
      <widget class="QLabel" name="label_7">
@@ -120,7 +130,7 @@
      </widget>
     </item>
     <item row="6" column="1">
-     <widget class="QSpinBox" name="spKurs"/>
+     <widget class="QSpinBox" name="sbKurs"/>
     </item>
    </layout>
   </widget>
@@ -130,7 +140,7 @@
      <x>240</x>
      <y>10</y>
      <width>78</width>
-     <height>81</height>
+     <height>108</height>
     </rect>
    </property>
    <property name="orientation">
@@ -149,6 +159,11 @@
    <widget class="QPushButton" name="pbDelete">
     <property name="text">
      <string>Удалить</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbFind">
+    <property name="text">
+     <string>Найти</string>
     </property>
    </widget>
   </widget>
