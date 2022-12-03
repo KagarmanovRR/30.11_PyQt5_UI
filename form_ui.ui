@@ -32,13 +32,13 @@
    <property name="geometry">
     <rect>
      <x>240</x>
-     <y>130</y>
+     <y>160</y>
      <width>142</width>
      <height>25</height>
     </rect>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -134,13 +134,49 @@
     </item>
    </layout>
   </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>100</y>
+     <width>81</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Поиск</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cbColNames">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>130</y>
+     <width>142</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbFind">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>190</y>
+     <width>78</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Найти</string>
+   </property>
+  </widget>
   <widget class="QSplitter" name="splitter_2">
    <property name="geometry">
     <rect>
      <x>240</x>
      <y>10</y>
      <width>78</width>
-     <height>108</height>
+     <height>81</height>
     </rect>
    </property>
    <property name="orientation">
@@ -159,11 +195,6 @@
    <widget class="QPushButton" name="pbDelete">
     <property name="text">
      <string>Удалить</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pbFind">
-    <property name="text">
-     <string>Найти</string>
     </property>
    </widget>
   </widget>

@@ -33,7 +33,7 @@ class MyWidget(QMainWindow, Ui_widget):
         self.twStud.setColumnCount(len(col_name))
         self.twStud.setHorizontalHeaderLabels(col_name)
         self.twStud.setRowCount(0)
-        #self.cbColNames.addItems(col_name)
+        self.cbColNames.addItems(col_name)
         for i, row in enumerate(data_rows):
             self.twStud.setRowCount(self.twStud.rowCount() + 1)
             for j, elem in enumerate(row):
@@ -86,7 +86,7 @@ class MyWidget(QMainWindow, Ui_widget):
         self.update_stud()
 
     def find_for_val(self):
-        val = self.leFIO.text()
+        val = self.leFind.text()
         col = self.cbColNames.itemText(self.cbColNames.currentIndex())
         self.update_stud(f"select * from student where {col} like '{val}%'")
         # try:
